@@ -19,6 +19,10 @@
                     </button>
                     </form>
                    indexです。
+                    <form  method="GET" action="{{ route('contact.index') }}" class="form-inline">
+                      <input class="form-control mr-sm-2" name="search" type="search" placeholder="検索" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">検索する</button>
+                    </form>
                    
                     <table class="table">
                        <thead>
@@ -42,6 +46,7 @@
                         @endforeach
                         </tbody>
                     </table>
+                    {{ $contacts->links() }}
                 </div>
             </div>
         </div>

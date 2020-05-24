@@ -28,7 +28,6 @@ Route::group(['prefix' => 'contact', 'middleware' => 'auth'], function(){
     
 });
 
-
 //REST
 //Route::resource('contact', 'ContactFormController')->only(['index', 'show']);
 
