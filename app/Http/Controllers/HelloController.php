@@ -9,8 +9,8 @@ class HelloController extends Controller
 {
     public function index()
     {
-        $array = [ 'one', 'two', 'three', 'four', 'five' ];
-        return view('hello.index', ['array' => $array]);
+
+        return view('hello.index', ['message' => 'Hello!']);
     }
 
     // public function post(Request $request)
