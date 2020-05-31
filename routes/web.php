@@ -29,7 +29,8 @@ Route::group(['prefix' => 'contact', 'middleware' => 'auth'], function(){
     Route::post('destroy/{id}', 'ContactFormController@destroy')->name('contact.destroy');
 });
 
-Route::get('hello', 'HelloController@index');
+Route::get('hello/', 'HelloController@index');
+// Route::post('hello/', 'HelloController@post');
 
 //REST
 //Route::resource('contact', 'ContactFormController')->only(['index', 'show']);
