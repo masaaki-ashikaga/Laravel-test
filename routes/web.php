@@ -27,8 +27,9 @@ Route::group(['prefix' => 'contact', 'middleware' => 'auth'], function(){
     Route::get('edit/{id}', 'ContactFormController@edit')->name('contact.edit');
     Route::post('update/{id}', 'ContactFormController@update')->name('contact.update');
     Route::post('destroy/{id}', 'ContactFormController@destroy')->name('contact.destroy');
-    
 });
+
+Route::get('hello', 'HelloController@index');
 
 //REST
 //Route::resource('contact', 'ContactFormController')->only(['index', 'show']);
