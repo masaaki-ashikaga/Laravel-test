@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Middleware\HelloMiddleware;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('hello', 'HelloController@index')->middleware('helo');
+Route::post('hello', 'HelloController@post');
+
 Route::get('tests/test', 'TestController@index');
 
 Route::get('shops/index', 'ShopController@index');
@@ -29,11 +32,8 @@ Route::group(['prefix' => 'contact', 'middleware' => 'auth'], function(){
     Route::post('destroy/{id}', 'ContactFormController@destroy')->name('contact.destroy');
 });
 
-Route::get('hello/', 'HelloController@index');
-// Route::post('hello/', 'HelloController@post');
 
-//REST
-//Route::resource('contact', 'ContactFormController')->only(['index', 'show']);
+
 
 Auth::routes();
 
