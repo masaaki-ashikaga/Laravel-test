@@ -27,6 +27,10 @@ Route::get('hello/del', 'HelloController@del');
 Route::post('hello/del', 'HelloController@remove');
 Route::get('hello/show', 'HelloController@show');
 
+Route::get('person/index', 'PersonController@index');
+Route::get('person/find', 'PersonController@find');
+Route::post('person/find', 'PersonController@search');
+
 
 Route::get('tests/test', 'TestController@index');
 
