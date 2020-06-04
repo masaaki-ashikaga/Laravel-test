@@ -30,7 +30,8 @@ Route::get('hello/show', 'HelloController@show');
 Route::get('person/index', 'PersonController@index');
 Route::get('person/find', 'PersonController@find');
 Route::post('person/find', 'PersonController@search');
-
+Route::get('person/add', 'PersonController@add');
+Route::post('person/add', 'PersonController@create');
 
 Route::get('tests/test', 'TestController@index');
 
